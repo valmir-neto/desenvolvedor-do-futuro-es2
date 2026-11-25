@@ -31,7 +31,7 @@ Diferença de tempo: 8min34s. Redução observada: 62,3% em relação à abordag
 - [REQUISITOS.md](REQUISITOS.md): requisitos do experimento.
 - [REGISTRO.md](REGISTRO.md): registro de intervenção humana.
 - [testes_padronizados/](testes_padronizados): 20 cenários comuns de aceitação por implementação.
-- [evidencias/](evidencias): registros textuais do experimento.
+- [evidencias/](evidencias): capturas de tela e registros textuais do experimento.
 
 ## Reprodução
 
@@ -55,7 +55,7 @@ python main.py
 
 ## Avaliação padronizada posterior
 
-Após o experimento original, foi criada uma suíte independente de 20 cenários de aceitação por implementação, executada via terminal com unittest. Na primeira execução, cinco falsos negativos ocorreram devido à formatação do prompt na saída do Agent. A suíte foi corrigida para normalizar esse prompt em ambas as abordagens, sem alterar os programas originais. Na reexecução, o responsável pelo experimento informou aprovação dos 40 testes (20 por abordagem). O resultado é relatado pelo executor; não há captura da reexecução anexada até o momento.
+Após o experimento original, foi criado, com auxílio do ChatGPT, um conjunto independente de 20 cenários de aceitação por implementação, executada via terminal com unittest. Na primeira execução, cinco falsos negativos ocorreram devido à formatação do prompt na saída do Agent. O conjunto de testes foi corrigido para normalizar esse prompt em ambas as abordagens, sem alterar os programas originais. Na reexecução, os 40 testes (20 por abordagem) foram aprovados em 6,313 segundos, conforme [captura do terminal](evidencias/testes_padronizados.png).
 
 Na raiz do repositório, execute:
 
@@ -68,9 +68,9 @@ Essa avaliação posterior não integra os tempos originais de desenvolvimento.
 ## Limitações
 
 - Uma execução por abordagem não permite generalização estatística.
-- As suítes originais são distintas; a quantidade de testes não mede isoladamente a qualidade.
+- Os conjuntos de testes originais são distintos; a quantidade de testes não mede isoladamente a qualidade.
 - A redução de tempo é descritiva, não uma garantia de produtividade.
-- A suíte padronizada avalia comportamento funcional, não demonstra equivalência integral de qualidade ou cobertura.
+- O conjunto padronizado de testes avalia comportamento funcional, não demonstra equivalência integral de qualidade ou cobertura.
 - Novas execuções independentes de desenvolvimento continuam como etapa futura.
 
 ## Conclusão
