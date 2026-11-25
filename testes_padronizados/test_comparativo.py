@@ -3,7 +3,6 @@ import subprocess
 import sys
 import unittest
 from pathlib import Path
-import re
 
 ROOT = Path(__file__).resolve().parents[1]
 VALID = ("1", "Estudar", "alta", "2026-12-01")
@@ -19,7 +18,7 @@ class CommonCases:
         )
         self.assertEqual(result.returncode, 0, result.stderr)
         self.assertIn("até logo", result.stdout.casefold())
-        return result.stdout.casefold()
+        return result.stdout.casefold().replace("escolha uma opção: ", "\n")
 
     def reject(self, *entries):
         out = self.run_cli(*entries, "2")
