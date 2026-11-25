@@ -39,4 +39,12 @@ Erro: Prazo inválido. Use uma data válida no formato AAAA-MM-DD.
 
 Ambas rejeitaram a data inexistente. As capturas não demonstram, isoladamente, todos os cenários de aceitação nem os tempos de desenvolvimento.
 
-As imagens originais não estão anexadas a este registro textual.
+As capturas das validações manuais acima permanecem apenas transcritas.
+
+## Capturas dos testes automatizados
+
+- [Copilot Ask — 5/5 aprovados](testes_ask.png).
+- [Copilot Agent — 9/9 aprovados](testes_agent.png).
+- [Testes padronizados — 40/40 aprovados em 6,313 segundos](testes_padronizados.png).
+
+Os tempos de execução dos testes não correspondem aos tempos de desenvolvimento.
